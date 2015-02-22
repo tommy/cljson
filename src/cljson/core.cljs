@@ -1,6 +1,7 @@
 (ns cljson.core
   (:require [om.core :as om]
-            [om.dom :as dom]))
+            [om.dom :as dom]
+            [cljson.connect]))
 
 (enable-console-print!)
 
