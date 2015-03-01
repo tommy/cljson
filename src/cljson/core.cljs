@@ -34,7 +34,6 @@
 
 (def ->edn pr-str)
 
-
 ;;;;;;;;;;;;;
 ;; components
 
@@ -63,7 +62,11 @@
 
       om/IRenderState
       (render-state [this {:keys [text]}]
-        (dom/textarea #js {:style {}
+        (dom/textarea #js {:style #js {:border "none"
+                                       :height "80%"
+                                       :width "calc(50% - 1em)"
+                                       :margin-right "1em"
+                                       :font-family "Menlo, Fixed-Width"}
                            :placeholder placeholder
                            :value text
                            :onChange #(text-change % owner (:to data))})))))
@@ -77,9 +80,17 @@
          :edn-changes (chan)})
 
       om/IRenderState
-      (render-state [this {:keys [json-changes
-                                  edn-changes]}]
-        (dom/div nil
+      (render-state [this {:keys [json-changes edn-changes]}]
+        (dom/div #js {:style #js {:max-width "50em"
+                                  :margin "auto"
+                                  :padding "1em 1em"
+                                  :text-align "center"
+                                  :height "100%"}}
+                 (dom/div #js {:style #js {:text-align "left"
+                                          :font-family "Helvetica Neue, Sans-Serif"
+                                          :font-size "larger"
+                                          :margin "0.25em 0"}}
+                         "EDN \u27fa JSON")
                  (om/build (input-component "EDN")
                            {:from json-changes :to edn-changes
                             :write-fn ->edn :read-fn json->})

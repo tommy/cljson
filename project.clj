@@ -1,5 +1,5 @@
 (defproject cljson "0.1.0-SNAPSHOT"
-  :description "FIXME: write this!"
+  :description "Little web tool to convert between JSON and EDN."
   :url "http://example.com/FIXME"
 
   :dependencies [[org.clojure/clojure "1.6.0"]
