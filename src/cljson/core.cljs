@@ -65,8 +65,8 @@
         (dom/textarea #js {:style #js {:border "none"
                                        :height "80%"
                                        :width "calc(50% - 1em)"
-                                       :margin-right "1em"
-                                       :font-family "Menlo, Fixed-Width"}
+                                       :marginRight "1em"
+                                       :fontFamily "Menlo, Monospace"}
                            :placeholder placeholder
                            :value text
                            :onChange #(text-change % owner (:to data))})))))
@@ -81,14 +81,14 @@
 
       om/IRenderState
       (render-state [this {:keys [json-changes edn-changes]}]
-        (dom/div #js {:style #js {:max-width "50em"
+        (dom/div #js {:style #js {:maxWidth "50em"
                                   :margin "auto"
                                   :padding "1em 1em"
-                                  :text-align "center"
+                                  :textAlign "center"
                                   :height "100%"}}
-                 (dom/div #js {:style #js {:text-align "left"
-                                          :font-family "Helvetica Neue, Sans-Serif"
-                                          :font-size "larger"
+                 (dom/div #js {:style #js {:textAlign "left"
+                                          :fontFamily "Helvetica Neue, Sans-Serif"
+                                          :fontSize "larger"
                                           :margin "0.25em 0"}}
                          "EDN \u27fa JSON")
                  (om/build (input-component "EDN")
