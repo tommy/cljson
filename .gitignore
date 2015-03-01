@@ -1,4 +1,5 @@
 pom.xml
+/public/build
 *jar
 /lib/
 /classes/
