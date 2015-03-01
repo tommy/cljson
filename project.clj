@@ -25,7 +25,7 @@
               :source-paths ["src"]
               :compiler {
                 :output-to "public/build/cljson.js"
-                :output-dir "public/build"
+                :output-dir "public/build/"
                 :optimizations :advanced
                 :cache-analysis true
                 }}]})

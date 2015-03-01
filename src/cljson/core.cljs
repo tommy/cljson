@@ -87,16 +87,21 @@
                                   :textAlign "center"
                                   :height "100%"}}
                  (dom/div #js {:style #js {:textAlign "left"
-                                          :fontFamily "Helvetica Neue, Sans-Serif"
-                                          :fontSize "larger"
-                                          :margin "0.25em 0"}}
-                         "EDN \u27fa JSON")
+                                           :fontSize "larger"
+                                           :margin "0.25em 0"}}
+                         "Clojure/EDN \u27fa JSON")
                  (om/build (input-component "EDN")
                            {:from json-changes :to edn-changes
                             :write-fn ->edn :read-fn json->})
                  (om/build (input-component "JSON")
                            {:from edn-changes :to json-changes
-                            :write-fn ->json :read-fn edn->}))))))
+                            :write-fn ->json :read-fn edn->})
+                 (dom/div #js {:style #js {:textAlign "right"
+                                           :margin "0.25em 0.75em 0 0"
+                                           :fontSize "smaller"}}
+                          "by "
+                          (dom/a #js {:href "http://twitter.com/papungha"}
+                                 "tommy")))))))
 
 
 (def app-state (atom {}))
