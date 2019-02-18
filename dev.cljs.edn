@@ -1,0 +1,7 @@
+^{:watch-dirs ["src"]
+  :css-dirs ["resources/public"]
+  :auto-testing true}
+{:main cljson.core
+ :optimizations :none
+ :output-to "target/dev/public/main.js"
+ :output-dir "target/dev/public"}

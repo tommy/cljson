@@ -1,0 +1,6 @@
+^{:figwheel-core false
+  :css-dirs ["resources/public"]}
+{:main cljson.core
+ :optimizations :advanced
+ :output-to "target/production/public/main.js"
+ :output-dir "target/production/public"}

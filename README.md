@@ -1,37 +1,37 @@
 # cljson
 
-FIXME: Write a one-line description of your library/project.
+A simple web tool to convert between Clojure EDN and JSON.
 
-## Overview
+## Build and Run
 
-FIXME: Write a paragraph about the library/project and highlight its goals.
+```bash
+clojure -A:fig:build
+```
 
-## Setup
+```bash
+open localhost:9500
+```
 
-First-time Clojurescript developers, add the following to your bash .profile:
+## Deployment
 
-    LEIN_FAST_TRAMPOLINE=y
-    export LEIN_FAST_TRAMPOLINE
-    alias cljsbuild="lein trampoline cljsbuild $@"
+### One-time
 
-To avoid compiling ClojureScript for each build, AOT Clojurescript locally in your project with the following:
+Install the AWS CLI and create a cljson profile with account keys.
 
-    lein trampoline run -m clojure.main
-    user=> (compile 'cljs.closure)
-    user=> (compile 'cljs.core)
+[AWS CLI installation instructions](https://docs.aws.amazon.com/cli/latest/userguide/install-macos.html#install-bundle-macos).
 
-Subsequent builds can use:
+```bash
+aws --profile cljson configure
+```
 
-    lein cljsbuild auto
+### Deploy
 
-Clean project specific out:
-
-     lein clean
-
-For more info, read [Waitin'](http://swannodette.github.io/2014/12/22/waitin/).
+```bash
+./deploy.sh
+```
 
 ## License
 
 Copyright © 2014 FIXME
 
-Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
+Distributed under the Apache License Version 2.0.

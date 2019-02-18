@@ -1,10 +1,41 @@
+# Created by https://www.gitignore.io/api/vim,clojure
+# Edit at https://www.gitignore.io/?templates=vim,clojure
+
+### Clojure ###
 pom.xml
-/public/build
-*jar
+pom.xml.asc
+*.jar
+*.class
 /lib/
 /classes/
-/out/
 /target/
+/checkouts/
 .lein-deps-sum
 .lein-repl-history
 .lein-plugins/
+.lein-failures
+.nrepl-port
+.cpcache/
+
+### Vim ###
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
+
+# End of https://www.gitignore.io/api/vim,clojure
+
+.rebel_readline_history
