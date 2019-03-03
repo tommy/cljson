@@ -2,6 +2,8 @@
 
 A simple web tool to convert between Clojure EDN and JSON.
 
+Hosted at [cljson.com](http://cljson.com).
+
 ## Build and Run
 
 ```bash
