@@ -4,4 +4,5 @@
 {:main cljson.core
  :optimizations :none
  :output-to "target/dev/public/main.js"
- :output-dir "target/dev/public"}
+ :output-dir "target/dev/public"
+ :asset-path ""}
